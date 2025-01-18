@@ -119,28 +119,14 @@ function handleCredentialResponse(response) {
       alert('An error occurred. Please try again later.');
     });
 };
-<script>
-// Initiate Google Auth before logout
-  function initGoogleAuth() {
-    gapi.load('auth2', () => {
-      gapi.auth2.init({
-        client_id: '340009438838-0mg7mqi32k3dobmbekgtuokrqpmvo7dh.apps.googleusercontent.com', // Replace with your client ID
-      }).then(() => {
-        console.log('Google Auth initialized');
-      }).catch(err => console.error('Error initializing Google Auth:', err));
-    });
-  }
 
-  // Ensure `initGoogleAuth` runs after the API script is loaded
-  window.onload = () => {
-    const checkGapi = setInterval(() => {
-      if (typeof gapi !== 'undefined') {
-        clearInterval(checkGapi);
-        initGoogleAuth();
-      }
-    }, 100);
-  };
-</script>
+function initGoogleAPI() {
+  gapi.load('auth2', () => {
+    gapi.auth2.init({
+      client_id: '340009438838-0mg7mqi32k3dobmbekgtuokrqpmvo7dh.apps.googleusercontent.com', // Replace with your Google OAuth client ID
+    });
+  });
+}
 
 // Google Logout Function
 function signOut() {
