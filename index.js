@@ -114,7 +114,7 @@ function handleCredentialResponse(response) {
               // Remove user profile and show the login button again
               //document.querySelector('.user-profile').remove(); // Remove user profile
               alert('you are logging out');
-              window.location.href ='https://youtube-music-generator-node.onrender.com/';
+              window.location.href ='https://youtube-music-mood.onrender.com';
           };
 
         });
