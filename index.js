@@ -103,9 +103,20 @@ function handleCredentialResponse(response) {
         logOut.textContent = 'Log out';
         logOut.classList.add('logout');
         userProfileContainer.appendChild(logOut);
-        
         logOut.addEventListener('click', () => {
           signOut();
+
+          // Google Logout Function
+          function signOut() {
+            localStorage.removeItem('user');
+            sessionStorage.removeItem('user');     
+            console.log('User signed out.');
+              // Remove user profile and show the login button again
+              //document.querySelector('.user-profile').remove(); // Remove user profile
+              alert('you are logging out');
+              window.location.href ='https://youtube-music-generator-node.onrender.com/';
+          };
+
         });
         
       }   else {
@@ -128,17 +139,17 @@ function initGoogleAPI() {
   });
 }
 
-// Google Logout Function
-function signOut() {
-  const auth2 = gapi.auth2.getAuthInstance();
-  auth2.signOut().then(() => {
-    console.log('User signed out.');
-    // Remove user profile and show the login button again
-    //document.querySelector('.user-profile').remove(); // Remove user profile
-    alert('you are logging out');
-    window.location.href ='https://youtube-music-mood.onrender.com/';
-  });
-}
+// // Google Logout Function
+// function signOut() {
+//   const auth2 = gapi.auth2.getAuthInstance();
+//   auth2.signOut().then(() => {
+//     console.log('User signed out.');
+//     // Remove user profile and show the login button again
+//     //document.querySelector('.user-profile').remove(); // Remove user profile
+//     alert('you are logging out');
+//     window.location.href ='https://youtube-music-mood.onrender.com/';
+//   });
+// }
 
 //Handle mood input and generate playlist. I change your ID from mood to text
 generateBtn.addEventListener('click', () => {
