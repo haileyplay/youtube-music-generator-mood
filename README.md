@@ -8,8 +8,8 @@ Generate personalized YouTube Music tracks based on user moods using sentiment a
 
 ## Getting Started
 Follow these instructions to set up and run the project locally.
-  <img src="https://github.com/haileyplay/youtube-music-generator-mood/blob/main/Moodify_index.jpg" width="700" height="350">
-  <img src="https://github.com/haileyplay/youtube-music-generator-mood/blob/main/Moodify_songlist.jpg" width="700" height="350">
+  <img src="https://github.com/haileyplay/youtube-music-generator-mood/blob/main/Moodify_index.jpg" width="300" height="700">
+  <img src="https://github.com/haileyplay/youtube-music-generator-mood/blob/main/Moodify_songlist.jpg" width="300" height="700">
 
 ## Prerequisites
 - Python 3.7 or higher.
